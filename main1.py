@@ -41,16 +41,16 @@ class Particle(arcade.Sprite):
         self.color_pos = 0
 
         self.particle_colors = [
-            (open_color.red_5, 4)
-            ,(open_color.red_4, 5)
-            ,(open_color.red_3, 6)
-            ,(open_color.red_2, 7)
-            ,(open_color.red_1, 8)
-            ,(open_color.teal_1, 8)
-            ,(open_color.teal_2, 7)
-            ,(open_color.teal_3, 6)
-            ,(open_color.teal_4, 5)
-            ,(open_color.teal_5, 4)
+            (open_color.yellow_5, 4)
+            ,(open_color.yellow_4, 5)
+            ,(open_color.yellow_5, 6)
+            ,(open_color.yellow_5, 7)
+            ,(open_color.yellow_7, 8)
+            ,(open_color.orange_6, 8)
+            ,(open_color.orange_6, 7)
+            ,(open_color.orange_7, 6)
+            ,(open_color.orange_8, 5)
+            ,(open_color.orange_9, 4)
         ]
         (self.color, self.lifetime) = self.particle_colors[self.color_pos]
         self.alive = True
@@ -110,7 +110,7 @@ class Window(arcade.Window):
             decay = random.uniform(PARTICLE_MIN_DECAY,PARTICLE_MAX_DECAY)
             scale = random.uniform(PARTICLE_MIN_SCALE,PARTICLE_MAX_SCALE)
             #Particle(asset, sprite scale, initial position [x], initial position [y], velocity [x], velocity [y], acceleration [x], acceleration [y], scale decay)
-            particle = Particle('circle_05',scale,x,y,dx,dy,ax,ay,decay)
+            particle = Particle('fire_02',scale,x,y,dx,dy,ax,ay,decay)
 
             self.particle_list.append(particle)
 
